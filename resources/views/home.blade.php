@@ -51,13 +51,13 @@
                     <div class="p-4 rounded-lg bg-white shadow hover:scale-105 transition transform" data-aos="zoom-in"
                         data-aos-delay="300">
                         <p class="text-sm text-gray-500">Location</p>
-                        <p class="mt-1 font-semibold text-gray-800">31524 Central Ave , Albany , NY, 12205</p>
+                        <p class="mt-1 font-semibold text-gray-800">1524 Central Ave , Albany , NY, 12205</p>
                     </div>
 
                     <div class="p-4 rounded-lg bg-white shadow hover:scale-105 transition transform" data-aos="zoom-in"
                         data-aos-delay="400">
                         <p class="text-sm text-gray-500">Contact</p>
-                        <p class="mt-1 font-semibold text-gray-800">+1 (646) 944 2999</p>
+                        <p class="mt-1 font-semibold text-gray-800"><a href="tel:+15187134041">+1 (518) 713-4041</a></p>
                     </div>
                 </div>
             </div>
