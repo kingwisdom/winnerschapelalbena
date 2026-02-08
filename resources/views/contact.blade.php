@@ -6,7 +6,7 @@
 
     <!-- Hero Section -->
     <section class="relative py-32 bg-cover bg-center bg-no-repeat"
-        style="background-image: url('{{ asset('images/banners/contact-banner.jpg') }}');" data-aos="fade-up"
+        style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/005/263/636/small/contact-us-concept-icons-such-as-mobile-phone-e-mail-address-chat-global-communication-on-dark-blue-background-for-presentation-web-banner-article-business-and-network-connection-and-company-free-vector.jpg');" data-aos="fade-up"
         data-aos-duration="1000">
         <div class="absolute inset-0 bg-blue-900/60"></div>
 

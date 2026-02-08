@@ -153,7 +153,7 @@
 
                 <!-- Actions -->
                 <div class="flex items-center gap-3">
-                    <a href="#watch"
+                    <a href="https://www.youtube.com/@lfcww/streams" target="_blank"
                         class="hidden sm:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-full bg-gray-600 text-white hover:bg-gray-700">
                         Watch Live
                     </a>
@@ -300,7 +300,7 @@
                         </svg>
                     </a>
                     <!-- YouTube -->
-                    <a href="https://youtube.com" target="_blank"
+                    <a href="https://www.youtube.com/@lfcww/streams" target="_blank"
                         class="w-10 h-10 rounded-full bg-gray-800 hover:bg-red-600 flex items-center justify-center transition transform hover:scale-110">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                             <path

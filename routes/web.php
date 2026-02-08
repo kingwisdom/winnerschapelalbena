@@ -1,10 +1,19 @@
 <?php
 
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 // Home
-Route::get('/', fn() => view('home'))->name('home');
+Route::get('/', [PageController::class, 'index'])->name('home');
+
+//blog
+Route::get('/blog', [PageController::class, 'blog'])->name('blog');
+
+//admin management
+Route::get('/wc', [AdminController::class, 'index'])->name('index');
+Route::post('/save', [AdminController::class, 'store'])->name('store');
+Route::delete('/delete/{id}', [AdminController::class, 'destroy'])->name('posts.destroy');
 
 // Who We Are
 Route::prefix('who-we-are')->group(function () {
@@ -46,7 +55,6 @@ Route::prefix('ministries')->group(function () {
     Route::get('/wofbi', function () {
         return view('ministries.wofbi');
     })->name('wofbi');
-
 });
 
 // Give
