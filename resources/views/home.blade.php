@@ -26,7 +26,7 @@
             </p>
 
             <div class="flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="350">
-                <a href="{{ route('watch') }}"
+                <a href="https://youtube.com/@winnerschapelintlalbany1373?si=h5IfjYNjl4Vjpi0A"
                     class="inline-flex items-center px-5 py-3 rounded-full bg-gray-800 text-white font-semibold shadow hover:bg-black transition">
                     Watch Live
                     <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -151,6 +151,7 @@
                 <div class="h-56 overflow-hidden">
                     <img src="{{ asset('assets/sunday_service.png') }}" alt="Sunday Service"
                         class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                    <!-- manage/storage/app/public/' . $post->image -->
                 </div>
                 <div class="p-8 text-center">
                     <h3 class="text-xl font-bold mb-3">
@@ -193,29 +194,61 @@
 
         <div class="flex justify-between items-center mb-6" data-aos="fade-up">
             <h3 class="text-2xl font-bold text-gray-900">Latest Information</h3>
-            <a href="#" class="text-gray-600 hover:underline font-medium">View All →</a>
+            <!-- <a href="#" class="text-gray-600 hover:underline font-medium">View All →</a> -->
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div x-data="{ open: false, title: '', content: '', image: '' }" class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
             @forelse($blogs as $post)
             <article class="bg-white rounded-lg shadow overflow-hidden hover:scale-105 transition transform"
                 data-aos="zoom-in" data-aos-delay="150">
                 <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}"
                     class="w-full h-40 object-cover">
+
                 <div class="p-4">
                     <h4 class="font-semibold">{{ $post->title }}</h4>
-                    <p class="text-sm text-gray-600 mt-2">{{ Str::limit($post->content, 250) }}</p>
-                    <a href="#" class="mt-3 inline-block text-gray-600 text-sm hover:underline">Read more →</a>
+                    <p class="text-sm text-gray-600 mt-2">
+                        {{ Str::limit($post->content, 250) }}
+                    </p>
+
+                    <button @click="
+                    open = true; 
+                    title = '{{ addslashes($post->title) }}'; 
+                    content = `{{ addslashes($post->content) }}`; 
+                    image = '{{ asset('manage/storage/app/public/' . $post->image) }}'
+                " class="mt-3 inline-block text-gray-600 text-sm hover:underline">
+                        Read more →
+                    </button>
                 </div>
             </article>
             @empty
             <p class="text-slate-600">No posts created yet.</p>
             @endforelse
 
-            <!-- https://wcialbany.org/C/images/iEnrPvcLCfxoLFVplJM7Mg3K2mbXfIwKUUQZOkOy.jpg -->
+
+            <!-- MODAL -->
+            <div x-show="open" x-transition
+                class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div @click.away="open = false"
+                    class="bg-white w-11/12 md:w-2/3 lg:w-1/2 rounded-lg shadow-lg overflow-hidden">
+                    <img :src="image" class="w-full h-56 object-cover">
+
+                    <div class="p-6 max-h-[60vh] overflow-y-auto">
+                        <h2 class="text-xl font-bold mb-4" x-text="title"></h2>
+                        <p class="text-gray-700 leading-relaxed" x-text="content"></p>
+                    </div>
+
+                    <div class="p-4 text-right border-t">
+                        <button @click="open = false"
+                            class="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
 
         </div>
+
     </div>
 </section>
 
@@ -223,20 +256,21 @@
 <!-- Include Swiper.js -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="//unpkg.com/alpinejs" defer></script>
 <script>
-const swiper = new Swiper('.swiper-container', {
-    loop: true,
-    autoplay: {
-        delay: 5000
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-    },
-});
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 5000
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+    });
 </script>
 @endsection
