@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- HERO SLIDER -->
-<section id="home" class="relative bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+<section id="home" class="relative bg-gradient-to-b from-white to-red-500 overflow-hidden">
     <div class="absolute inset-0">
         <img src="{{ asset('https://www.psephizo.com/wp-content/uploads/2018/02/worship-image.jpg') }}" alt="Church"
             class="w-full h-full object-cover opacity-20">
@@ -40,26 +40,6 @@
                     Give
                 </a>
             </div>
-
-            <div class="mt-6 grid gap-4 sm:grid-cols-3">
-                <div class="p-4 rounded-lg bg-white shadow hover:scale-105 transition transform" data-aos="zoom-in"
-                    data-aos-delay="200">
-                    <p class="text-sm text-gray-500">Next Service</p>
-                    <p class="mt-1 font-semibold text-gray-800">Sunday <br> 09:00 AM - 11:00 AM</p>
-                </div>
-
-                <div class="p-4 rounded-lg bg-white shadow hover:scale-105 transition transform" data-aos="zoom-in"
-                    data-aos-delay="300">
-                    <p class="text-sm text-gray-500">Location</p>
-                    <p class="mt-1 font-semibold text-gray-800">1524 Central Ave , Albany , NY, 12205</p>
-                </div>
-
-                <div class="p-4 rounded-lg bg-white shadow hover:scale-105 transition transform" data-aos="zoom-in"
-                    data-aos-delay="400">
-                    <p class="text-sm text-gray-500">Contact</p>
-                    <p class="mt-1 font-semibold text-gray-800"><a href="tel:+15187134041">+1 (518) 713-4041</a></p>
-                </div>
-            </div>
         </div>
 
         <!-- HERO SLIDER -->
@@ -69,86 +49,132 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="{{ asset('https://www.clearview.org/wp-content/uploads/2023/05/bible-study.jpeg') }}"
+                                <img src="https://www.winnerschapelmanchester.org.uk/wp-content/uploads/2026/02/feb-2026-1-1.png"
                                     class="w-full h-auto object-cover" alt="Winners Chapel">
                             </div>
                             <div class="swiper-slide">
-                                <img src="{{ asset('https://i0.wp.com/buildingjerusalem.blog/wp-content/uploads/2021/10/grow-church-prayer-meeting.jpg?fit=642%2C428&ssl=1') }}"
+                                <img src="http://www.winnerschapelmanchester.org.uk/wp-content/uploads/2026/01/jan-2026-theme.png"
                                     class="w-full h-auto object-cover" alt="Service">
                             </div>
-                            <div class="swiper-slide">
+                            <!-- <div class="swiper-slide">
                                 <img src="{{ asset('assets/group.jpg') }}" class="w-full h-auto object-cover"
                                     alt="Community">
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="swiper-pagination"></div>
                         <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <!-- <div class="swiper-button-prev"></div> -->
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </section>
 
 
 <!-- SERVICES -->
-<section id="services" class="py-16 bg-white relative z-10">
-    <div class="max-w-7xl mx-auto px-4">
+<section id="services" class="relative bg-gradient-to-b from-[#5a0000] to-black py-20">
 
-        <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
-            <h2 class="text-3xl font-bold text-gray-900">Services</h2>
-            <p class="mt-2 text-gray-600">Faith teaching, community outreach, training</p>
+    <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Top Info Row -->
+        <div class="grid gap-6 md:grid-cols-3 mb-16">
+
+            <!-- Next Service -->
+            <div class="bg-white text-center p-8 rounded-md shadow-xl hover:-translate-y-1 transition duration-300">
+                <p class="text-sm uppercase tracking-widest text-gray-500">
+                    Next Service
+                </p>
+                <p class="mt-3 text-xl font-bold text-gray-900">
+                    Sunday <br> 09:00 AM - 11:00 AM
+                </p>
+            </div>
+
+            <!-- Location -->
+            <div class="bg-white text-center p-8 rounded-md shadow-xl hover:-translate-y-1 transition duration-300">
+                <p class="text-sm uppercase tracking-widest text-gray-500">
+                    Location
+                </p>
+                <p class="mt-3 text-xl font-bold text-gray-900">
+                    1524 Central Ave , Albany , NY, 12205
+                </p>
+            </div>
+
+            <!-- Contact -->
+            <div class="bg-white text-center p-8 rounded-md shadow-xl hover:-translate-y-1 transition duration-300">
+                <p class="text-sm uppercase tracking-widest text-gray-500">
+                    Contact
+                </p>
+                <p class="mt-3 text-xl font-bold text-gray-900">
+                    <a href="tel:+15187134041" class="hover:text-[#7a0000] transition">
+                        +1 (518) 713-4041
+                    </a>
+                </p>
+            </div>
+
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Section Heading -->
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-4xl font-bold uppercase tracking-wider text-white">
+                Services
+            </h2>
+            <p class="mt-4 text-gray-300">
+                Faith teaching, community outreach, training
+            </p>
+        </div>
+
+        <!-- Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
             <!-- Communion Service -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
-                data-aos="fade-up" data-aos-delay="150">
-                <div class="h-48 overflow-hidden">
+            <div
+                class="bg-white rounded-xl overflow-hidden shadow-xl hover:-translate-y-2 hover:shadow-2xl transition duration-500">
+                <div class="h-56 overflow-hidden">
                     <img src="{{ asset('assets/communion.png') }}" alt="Communion Service"
                         class="w-full h-full object-cover hover:scale-110 transition duration-700">
                 </div>
-
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold mb-2">Communion Service</h3>
-                    <p class="text-sm text-gray-600">
+                <div class="p-8 text-center">
+                    <h3 class="text-xl font-bold mb-3">
+                        Communion Service
+                    </h3>
+                    <p class="text-gray-600">
                         Experience the life-transforming power of the Communion every week.
                     </p>
                 </div>
             </div>
 
             <!-- Sunday Service -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
-                data-aos="fade-up" data-aos-delay="250">
-                <div class="h-48 overflow-hidden">
+            <div
+                class="bg-white rounded-xl overflow-hidden shadow-xl hover:-translate-y-2 hover:shadow-2xl transition duration-500">
+                <div class="h-56 overflow-hidden">
                     <img src="{{ asset('assets/sunday_service.png') }}" alt="Sunday Service"
                         class="w-full h-full object-cover hover:scale-110 transition duration-700">
                 </div>
-
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold mb-2">Sunday Worship Service</h3>
-                    <p class="text-sm text-gray-600">
+                <div class="p-8 text-center">
+                    <h3 class="text-xl font-bold mb-3">
+                        Sunday Worship Service
+                    </h3>
+                    <p class="text-gray-600">
                         Join us every Sunday for a powerful encounter with God’s Word.
                     </p>
                 </div>
             </div>
 
             <!-- Covenant Hour of Prayer -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
-                data-aos="fade-up" data-aos-delay="350">
-                <div class="h-48 overflow-hidden">
-                    <img src="{{ asset('https://www.winnerschapelny.org/images/2021/11/12/whatsapp-image-2021-11-11-at-2.42.11-pm.jpeg') }}"
+            <div
+                class="bg-white rounded-xl overflow-hidden shadow-xl hover:-translate-y-2 hover:shadow-2xl transition duration-500">
+                <div class="h-56 overflow-hidden">
+                    <img src="https://www.winnerschapelny.org/images/2021/11/12/whatsapp-image-2021-11-11-at-2.42.11-pm.jpeg"
                         alt="Covenant Hour of Prayer"
                         class="w-full h-full object-cover hover:scale-110 transition duration-700">
                 </div>
-
-                <div class="p-6">
-                    <h3 class="text-lg font-semibold mb-2">Covenant Hour of Prayer</h3>
-                    <p class="text-sm text-gray-600">
+                <div class="p-8 text-center">
+                    <h3 class="text-xl font-bold mb-3">
+                        Covenant Hour of Prayer
+                    </h3>
+                    <p class="text-gray-600">
                         Start your day with divine empowerment through early morning prayer.
                     </p>
                 </div>
@@ -158,6 +184,7 @@
 
     </div>
 </section>
+
 
 
 <!-- BLOG -->
@@ -186,7 +213,7 @@
             <p class="text-slate-600">No posts created yet.</p>
             @endforelse
 
-
+            <!-- https://wcialbany.org/C/images/iEnrPvcLCfxoLFVplJM7Mg3K2mbXfIwKUUQZOkOy.jpg -->
 
         </div>
     </div>
@@ -197,19 +224,19 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script>
-    const swiper = new Swiper('.swiper-container', {
-        loop: true,
-        autoplay: {
-            delay: 5000
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-        },
-    });
+const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+        delay: 5000
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+});
 </script>
 @endsection
