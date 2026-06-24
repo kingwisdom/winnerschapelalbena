@@ -4,60 +4,62 @@
 
 @section('content')
 
-    <!-- Hero (with background image + overlay) -->
-    <section class="relative py-28 bg-cover bg-center bg-no-repeat"
-        style="background-image: url('{{ asset('https://www.winnerschapelny.org/images/children.jpg') }}')">
-        <div class="absolute inset-0 bg-black/60"></div>
+<!-- Hero -->
+<section class="relative min-h-[50vh] flex items-center overflow-hidden bg-dark">
+    <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=80" alt="Teens Ministry"
+             class="w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/80 to-dark/60"></div>
+        <div class="absolute inset-0 bg-grid opacity-20"></div>
+    </div>
 
-        <div class="relative max-w-4xl mx-auto px-4 text-center">
-            <h1 data-aos="fade-down" class="text-3xl md:text-4xl font-bold text-white">
-                Teens Ministry
-            </h1>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur border border-white/10 mb-6">
+            <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            <span class="text-white/70 text-xs font-medium tracking-widest uppercase">Ages 13–19</span>
+        </div>
 
-            <p data-aos="fade-up" data-aos-delay="150" class="mt-4 text-slate-200 max-w-2xl mx-auto">
-                Empowering teenagers to grow spiritually, discover purpose, and navigate life with God’s wisdom.
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white" data-aos="fade-up">
+            Teens Ministry
+        </h1>
+        <p class="mt-6 text-lg text-white/70 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+            Empowering teenagers to grow spiritually, discover purpose, and navigate life with God's wisdom.
+        </p>
+    </div>
+</section>
+
+<!-- Content -->
+<section class="py-20 lg:py-28 bg-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-dark-muted/80 leading-relaxed mb-8 text-lg" data-aos="fade-up">
+            Today's youth face new and complex challenges. We believe God's eternal truths provide the answers they need. Our mission is to raise responsible citizens and visionary leaders who influence society and stand boldly for Christ.
+        </p>
+
+        <p class="text-dark-muted/80 leading-relaxed mb-12" data-aos="fade-up" data-aos-delay="100">
+            We help teens experience God's freedom spiritually, socially, and emotionally. They are trained to apply Scripture to real-life situations, strengthening their confidence and walk with God.
+        </p>
+
+        <!-- Mission -->
+        <div class="card p-8 lg:p-10 bg-white border-l-4 border-purple-500 mb-12" data-aos="zoom-in">
+            <h3 class="text-xl font-heading font-bold text-dark mb-3">Our Mission</h3>
+            <p class="text-dark-muted/70 leading-relaxed">
+                To raise teenagers who understand their identity in Christ, embrace discipline, develop strong character, and conquer their world for Jesus.
             </p>
         </div>
-    </section>
 
-    <!-- Main Content -->
-    <section class="py-16">
-        <div class="max-w-4xl mx-auto px-4">
-
-            <p data-aos="fade-up" class="text-slate-700 leading-relaxed mb-8">
-                Today’s youth face new and complex challenges. We believe God’s eternal truths provide the answers they
-                need.
-                Our mission is to raise responsible citizens and visionary leaders who influence society and stand boldly
-                for Christ.
+        <!-- Scripture -->
+        <blockquote class="relative border-l-4 border-purple-500 pl-6 py-4 mb-12" data-aos="fade-right">
+            <p class="text-dark/80 text-lg italic leading-relaxed">
+                "Let no one despise your youth, but be an example to believers in word, conduct, love, spirit, faith, purity."
             </p>
+            <p class="text-dark-muted/60 text-sm mt-2">— 1 Timothy 4:12</p>
+        </blockquote>
 
-            <p data-aos="fade-up" data-aos-delay="150" class="text-slate-700 leading-relaxed mb-8">
-                We help teens experience God’s freedom spiritually, socially, and emotionally. They are trained to apply
-                Scripture to real-life situations, strengthening their confidence and walk with God.
-            </p>
-
-            <!-- Mission Highlight -->
-            <div data-aos="zoom-in" data-aos-delay="200" class="bg-white border rounded-lg shadow p-6 mb-12">
-                <h2 class="text-xl font-semibold mb-3">Our Mission</h2>
-                <p class="text-slate-700 leading-relaxed">
-                    To raise teenagers who understand their identity in Christ, embrace discipline, develop strong
-                    character, and conquer their world for Jesus.
-                </p>
-            </div>
-
-            <!-- Scripture Block -->
-            <blockquote data-aos="fade-right" data-aos-delay="250"
-                class="border-l-4 border-purple-500 pl-4 italic text-slate-700 mb-12">
-                “Let no one despise your youth, but be an example to believers in word, conduct, love, spirit, faith,
-                purity.” — 1 Timothy 4:12
-            </blockquote>
-
-            <!-- Image -->
-            <div data-aos="fade-up" data-aos-delay="300" class="rounded-lg overflow-hidden shadow bg-slate-100">
-                <img src="{{ asset('images/ministries/teens-group.jpg') }}" class="w-full h-64 object-cover">
-            </div>
-
+        <div class="rounded-2xl overflow-hidden shadow-xl" data-aos="fade-up">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80"
+                 class="w-full h-72 lg:h-96 object-cover" alt="Teens Ministry">
         </div>
-    </section>
+    </div>
+</section>
 
 @endsection

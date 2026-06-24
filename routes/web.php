@@ -7,10 +7,11 @@ use Illuminate\Support\Facades\Route;
 // Home
 Route::get('/', [PageController::class, 'index'])->name('home');
 
-//blog
+// Blog
 Route::get('/blog', [PageController::class, 'blog'])->name('blog');
+Route::get('/blog/{slug}', [PageController::class, 'show'])->name('blog.show');
 
-//admin management
+// Admin management
 Route::get('/wc', [AdminController::class, 'index'])->name('index');
 Route::post('/save', [AdminController::class, 'store'])->name('store');
 Route::delete('/delete/{id}', [AdminController::class, 'destroy'])->name('posts.destroy');
@@ -62,9 +63,6 @@ Route::get('/give', fn() => view('give'))->name('give');
 
 // Contact
 Route::get('/contact', fn() => view('contact'))->name('contact');
-
-// Blog (optional since home page references it)
-Route::get('/blog', fn() => view('blog.index'))->name('blog');
 
 // Watch Live
 Route::get('/watch-live', fn() => view('watch.index'))->name('watch');
