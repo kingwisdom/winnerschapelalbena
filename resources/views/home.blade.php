@@ -66,7 +66,7 @@
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="https://www.winnerschapelmanchester.org.uk/wp-content/uploads/2026/02/feb-2026-1-1.png"
+                                    <img src="{{asset('assets/group.jpg')}}"
                                         class="w-full h-[400px] lg:h-[500px] object-cover" alt="Winners Chapel">
                                 </div>
                                 <div class="swiper-slide">
@@ -197,8 +197,7 @@
             <div class="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-secondary/50 transition-all duration-500 hover:-translate-y-2"
                 data-aos="fade-up" data-aos-delay="200">
                 <div class="h-56 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1504052434568-70ad5836ab65?w=600&q=80"
-                        alt="Covenant Hour of Prayer"
+                    <img src="{{ asset('assets/COP.jpg') }}" alt="Covenant Hour of Prayer"
                         class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent"></div>
                 </div>
@@ -249,7 +248,8 @@
                 <div class="p-6">
                     <h4
                         class="font-heading font-bold text-lg text-dark mb-2 group-hover:text-primary transition-colors">
-                        {{ $post->title }}</h4>
+                        {{ $post->title }}
+                    </h4>
                     <p class="text-dark-muted/70 text-sm leading-relaxed">
                         {{ Str::limit($post->content, 200) }}
                     </p>
@@ -283,19 +283,19 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script>
-new Swiper('.swiper-container', {
-    loop: true,
-    autoplay: {
-        delay: 5000
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        renderBullet: function(index, className) {
-            return '<span class="' + className +
-                '" style="background: #C9A94E; width: 10px; height: 10px;"></span>';
-        }
-    },
-});
+    new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 5000
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function(index, className) {
+                return '<span class="' + className +
+                    '" style="background: #C9A94E; width: 10px; height: 10px;"></span>';
+            }
+        },
+    });
 </script>
 @endsection
